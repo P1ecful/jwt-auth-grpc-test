@@ -1,0 +1,20 @@
+env: "local"
+
+service:
+  secret_key: "super_secret_key"
+  access_token_ttl: "15m"
+
+storage:
+  host: "localhost"
+  port: 5432
+  database: "postgres"
+  password: "postgres"
+  username: "postgres"
+  uri: "postgresql://%s:%s@%s:%s/%s"
+
+grpc:
+  port: ":8080"
+  timeout: "10h"
+
+migrate:
+  migrations_path: "./migrations"
