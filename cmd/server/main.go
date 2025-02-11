@@ -17,7 +17,6 @@ import (
 
 func main() {
 	logger, _ := zap.NewDevelopment()
-
 	cfg := config.LoadConfig("config/config.yaml", logger)
 
 	ctx, cancel := context.WithCancel(context.Background())

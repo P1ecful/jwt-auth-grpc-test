@@ -1,7 +1,7 @@
 version: "3"
 tasks:
   run:
-    desc: "Start service"
+    desc: "start service"
     cmd:
       go run cmd/server/main.go
 
@@ -10,5 +10,11 @@ tasks:
     cmd:
       go test ./tests
 
+  gen-migrations:
+    desc: "generating migrations files"
+    cmd: migrate create -ext sql -dir ./migrations -seq users_table
+
   migrate:
-    desc: "Migrations"
+    desc: "migrate database"
+    cmd:
+      go run cmd/migrator/main.go

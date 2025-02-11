@@ -72,7 +72,7 @@ func (gs *GRPCServer) GetDataFromAccessToken(_ context.Context, req *gen.GetData
 	email, err := gs.service.GetDataFromAccessToken(req.GetToken())
 	if err != nil {
 		gs.logger.Debug("Get data error", zap.Error(err))
-		return nil, status.Error(codes.Unauthenticated, err.Error())
+		return nil, status.Error(codes.Unauthenticated, "error getting data from access token")
 	}
 
 	return &gen.GetDataFromAccessTokenResponse{Email: email}, nil
