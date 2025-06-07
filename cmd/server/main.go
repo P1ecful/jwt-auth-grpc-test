@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"github.com/P1ecful/jwt-grpc-test/internal/config"
-	"github.com/P1ecful/jwt-grpc-test/internal/grpc/auth"
+	"github.com/P1ecful/jwt-grpc-test/internal/controller/grpc/auth"
 	"github.com/P1ecful/jwt-grpc-test/internal/service"
 	"github.com/P1ecful/jwt-grpc-test/internal/storage/pgx"
 	gen "github.com/P1ecful/pkg/gen/grpc/auth"
